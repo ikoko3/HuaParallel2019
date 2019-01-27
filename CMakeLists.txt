@@ -3,4 +3,4 @@ project(HuaParallel C)
 
 set(CMAKE_C_STANDARD 11)
 
-add_executable(test main.c Entity/fastq.h Helpers/FileHelper.h Helpers/FileHelper.c Entity/fastq.c)
+add_executable(test Entity/fastq.h Helpers/FileHelper.h Helpers/FileHelper.c Serial_Implementation.c Helpers/FastqHelper.c Helpers/FastqHelper.h)

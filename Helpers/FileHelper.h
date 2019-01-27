@@ -14,4 +14,4 @@ FILE* Get_Output_File(char *filename);
 
 int Count_File_Lines(FILE * file);
 
-char** Get_Lines(FILE * file,int lines_count,int lines_length);
+void Close_Files(FILE * Fin,FILE * Fout);

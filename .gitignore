@@ -54,6 +54,8 @@ Module.symvers
 Mkfile.old
 dkms.conf
 
+CMakeLists.txt
+
 # User-specific stuff
 .idea/*
 
