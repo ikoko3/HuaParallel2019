@@ -23,7 +23,7 @@ char** Create_Next_Fastq_Buffer(FILE * file){
     char *pos;
     if ((pos=strchr(buffer[1], '\n')) != NULL)
         *pos = '\0';
-    buffer[0][PLUS_SYMBOL_LENGTH-1] = '\0';
+    buffer[2][PLUS_SYMBOL_LENGTH-1] = '\0';
     if ((pos=strchr(buffer[3], '\n')) != NULL)
         *pos = '\0';
 
@@ -41,7 +41,7 @@ fastq_record Parse_Fastq_Record(char** buffer){
     return record;
 }
 
-void Filter_Record(fastq_record record,int window_length,int window_threshold){
+int Filter_Record(fastq_record record,int window_length,int window_threshold){
     // start and end position of the sliding window
     int start=0;
     int end=start+window_length;
@@ -62,6 +62,7 @@ void Filter_Record(fastq_record record,int window_length,int window_threshold){
     }
     start--;
     Trim_Record_At(record, start);
+    return start;
 }
 
 //Filter a fastq record at a specific position

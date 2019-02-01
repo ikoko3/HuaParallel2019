@@ -24,7 +24,7 @@ char** Create_Next_Fastq_Buffer(FILE * file);
 void Empty_fastq_buffer(char **buffer);
 
 //Filters a fastq record, based on its quality
-void Filter_Record(fastq_record record,int window_length,int window_threshold);
+int Filter_Record(fastq_record record,int window_length,int window_threshold);
 
 //Trims a fastq record at a specific position
 void Trim_Record_At(fastq_record record, size_t position);
