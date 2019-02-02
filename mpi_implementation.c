@@ -33,7 +33,6 @@ int main(int argc, char **argv){
 
         int no_of_records = Calculate_No_Of_Records(Count_File_Lines(Fin));
         int records_per_node = no_of_records/(size -1 );
-        int max_range=records_per_node + no_of_records%(size -1);
 
         printf("records in this file :%d\n",no_of_records);
         printf("Records Per Node :%d\n",records_per_node);
@@ -75,7 +74,7 @@ int main(int argc, char **argv){
 
     }else{ //slave
         int data[2];
-        int from,to,position=0;
+        int from,to;
 
         MPI_Recv(data, 2, MPI_INT, 0, 1, MPI_COMM_WORLD, &status);
         from = data[0];
