@@ -1,6 +1,6 @@
 
-#ifndef TEST_FASTQ_H
-#define TEST_FASTQ_H
+#ifndef FASTQ_H
+#define FASTQ_H
 
 #endif
 

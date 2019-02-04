@@ -13,6 +13,7 @@ int main(int argc,char **argv)
         printf("the argument count is wrong, format should be <input.fastq> <output.fastq>\n");
         exit(-1);
     }
+    printf("SERIAL IMPLEMENTATION: Started filtering file: %s\n",argv[1]);
     FILE * Fin = Get_Input_File(argv[1]);
     FILE * Fout = Get_Output_File(argv[2]);
 
@@ -30,7 +31,7 @@ int main(int argc,char **argv)
         free(record);
     }
 
-
+    printf("SERIAL IMPLEMENTATION: Ended filtering output file: %s\n",argv[2]);
     Close_Files(Fin,Fout);
     exit(0);
 }
