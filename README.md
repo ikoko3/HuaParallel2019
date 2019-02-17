@@ -3,11 +3,11 @@
 Parallel fastq filtering  
  C99 - GCC
 
-
+`
 
 			                Serial Implementation
 
-    `Compile: 
+    Compile: 
     gcc -o serial serial_implementation.c Entity/fastq.h Helpers/FastqHelper.h Helpers/FastqHelper.c Helpers/FileHelper.h Helpers/FileHelper.c
 
     Excecute: 
@@ -29,7 +29,7 @@ Parallel fastq filtering
 			                OpenMP Implementation
 
     Compile:
-    gcc -o par_omp openmp_implementation.c Entity/fastq.h Helpers/FastqHelper.h Helpers/FastqHelper.c Helpers/FileHelper.h Helpers/FileHelper.c
+    gcc -o par_omp openmp_implementation.c Entity/fastq.h Helpers/FastqHelper.h Helpers/FastqHelper.c Helpers/FileHelper.h Helpers/FileHelper.c -fopenmp
 
 
     Excecute:
